@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akshay kate | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+</head>
+<body>
+<!-- header -->
+<header>
+<nav class="floating-navbar">
+  <div class="nav-content">
+    <button class="menu-btn" aria-label="Open Menu">&#9776;</button>
+    <ul class="nav-list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Mobile overlay menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="menu-card">
+    <div class="menu-header">
+      <span>Navigation</span>
+      <button class="close-btn" aria-label="Close Menu" id="closeMenu">&times;</button>
+    </div>
+    <ul class="menu-links">
+    <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+    <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+    <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+</ul>
+
+  </div>
+</div>
+<script>
+    const menuBtn = document.querySelector('.menu-btn');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenu = document.getElementById('closeMenu');
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('active');
+}
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.add('active');
+});
+
+closeMenu.addEventListener('click', closeMobileMenu);
+
+// Close menu when clicking a link inside mobile menu
+document.querySelectorAll('.menu-links a').forEach(link => {
+  link.addEventListener('click', closeMobileMenu);
+});
+
+</script>
+
+  
+
+  <div class="profile">
+    <img src="profile.jpg" alt="Profile" /><br>
+    <div class="status"><span class="dot"></span> Available for work!</div>
+    <h1>Hi I'm <span class="highlight">Akshay kate</span> – Full-Stack Web Developer</h1>
+    <p class="description">
+     Aspiring full-stack web developer skilled in HTML, CSS, and JavaScript, eager to build responsive and user-friendly web applications. Passionate about learning new technologies and solving real-world problems through coding. Ready to contribute and grow in a dynamic development team...
+    </p>
+  </div>
+</header>
+
+
+<div class="action-buttons">
+  <a href="#Contact" class="action-btn primary">Get in touch</a>
+  <a href="cv.pdf" download class="action-btn"> Download CV <i class="fas fa-download"></i></a>
+  <a href="#" target="_blank" class="icon-btn"><i class="fab fa-linkedin-in"></i></a>
+  <a href="#" target="_blank" class="icon-btn"><i class="fab fa-instagram"></i></a>
+  <a href="#" target="_blank" class="icon-btn"><i class="fa-brands fa-github"></i></a>
+
+<!-- About me -->
+<section class="about-section" id="about">
+  <div class="about-container">
+    <h2>About Me</h2>
+    <p>
+      My name is Akshay Kate, and I am a passionate Full Stack Web Developer with hands-on experience in building fast, scalable, and user-friendly web applications. I specialize in designing clean UI/UX with React.js, Next.js, Tailwind CSS, and TypeScript, while ensuring robust backend architecture using Node.js, Express, MongoDB, and MySQL.
+    </p>
+    <p>
+      Whether it’s creating modern interfaces or architecting secure APIs, I thrive on coding elegant solutions that deliver both performance and accessibility. My knowledge of Git, Docker, and cloud deployment helps me manage end-to-end projects, from ideation to production.
+    </p>
+    <p>
+      I’ve developed e-commerce sites, ISP portals, booking apps, and custom dashboards. I enjoy collaborating on challenging problems and experimenting with new tools and patterns. Learning, growing, and sharing knowledge with creative teams keeps me motivated and curious in web development.
+    </p>
+  </div>
+</section>
+
+
+<section class="stack-row">
+  <i class="devicon-python-plain-wordmark stack-icon"></i>
+  <i class="devicon-django-plain-wordmark stack-icon"></i>
+  <i class="devicon-html5-plain-wordmark stack-icon"></i>
+  <i class="devicon-css3-plain-wordmark stack-icon"></i>
+  <i class="devicon-javascript-plain stack-icon"></i>
+  <i class="devicon-react-original-wordmark stack-icon"></i>
+  <i class="devicon-nodejs-plain-wordmark stack-icon"></i>
+  <i class="devicon-postgresql-plain-wordmark stack-icon"></i> <!-- or your favorite DB -->
+  <i class="devicon-git-plain-wordmark stack-icon"></i>
+  <i class="devicon-docker-plain-wordmark stack-icon"></i>
+</section>
+
+<!-- Projects -->
+
+<section class="projects-section" id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <img src="flipkartclone.png" alt="Project Screenshot" class="project-img"/>
+      <div class="project-content">
+        <h3>Flipkart Clone</h3>
+        <p>
+          This is my first website, a Flipkart clone created using HTML, CSS, and Bootstrap. It replicates the Flipkart layout with a responsive design, showcasing product listings, navigation, and user interface elements. The project helped me learn core web development skills and Bootstrap’s grid system for responsive UI.
+        </p>
+        <div class="tech-tags">
+          <span>Html</span>
+          <span>Css</span>
+          <span>Bootsrap</span>
+          
+        </div>
+        <a href="https://akshaykate19.github.io/flipkart-clone/" class="preview-btn"><i class="fas fa-external-link-alt"></i> Preview</a>
+      </div>
+    </div>
+    <!-- Project Card 2 -->
+    <div class="project-card">
+      <img src="isp.png" alt="Project Screenshot" class="project-img"/>
+      <div class="project-content">
+        <h3>Internet Service Provider (Front End)</h3>
+        <p>
+          Developed a responsive and user-friendly ISP frontend website using semantic HTML and CSS for structure and style. Bootstrap's grid system and components ensured seamless responsiveness across devices. JavaScript was used to add interactive elements and enhance user experience.
+        </p>
+        <div class="tech-tags">
+          <span>Html</span>
+          <span>Css</span>
+          <span>Bootsrap</span>
+          <span>React.js</span>
+        </div>
+        <a href="https://akshaykate19.github.io/ISP/" class="preview-btn"><i class="fas fa-external-link-alt"></i> Preview</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact  -->
+
+<section class="contact-section" id="contact">
+  <h2>Get in Touch</h2>
+  <p>
+    Please contact me directly at <a href="mailto:akkshaykate@gmail.com" class="mail-link">akkshaykate@gmail.com</a>
+    or through this form.
+  </p>
+  <form class="contact-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required />
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="your@email.com" required />
+    
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+    
+    <button type="submit" class="submit-btn">
+      Submit <span>&rarr;</span>
+    </button>
+  </form>
+</section>
+
+<!-- Footer -->
+
+<footer class="site-footer">
+  <p>© 2025 Akshay kate. All rights reserved.</p>
+</footer>
+</body>
+
+
+</div>
+</body>
+</html>
